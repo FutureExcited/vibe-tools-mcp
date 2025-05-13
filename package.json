@@ -1,0 +1,36 @@
+{
+  "name": "vibe-tools-mcp",
+  "version": "0.2.0",
+  "description": "MCP Server for vibe-tools",
+  "main": "build/index.js",
+  "type": "module",
+  "bin": {
+    "vibe-tools-mcp": "./build/index.js"
+  },
+  "scripts": {
+    "build": "tsc && chmod +x build/index.js",
+    "start": "node build/index.js",
+    "dev": "tsc --watch & node --watch build/index.js",
+    "publish:npm": "bun run build && npm publish"
+  },
+  "files": [
+    "build",
+    "LICENSE",
+    "README.md"
+  ],
+  "keywords": [
+    "mcp",
+    "vibe-tools"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.11.2",
+    "vibe-tools": "^0.60.9",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.12",
+    "typescript": "^5.4.5"
+  }
+}
