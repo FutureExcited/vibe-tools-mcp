@@ -20,7 +20,8 @@ const askSchema = {
 
 export const askTool = {
   name: "ask",
-  description: "Ask a question using vibe-tools ask.",
+  description:
+    "Ask a question directly to an AI model. Note that this command does not include repository context by default.",
   schema: askSchema,
   handler: async (args: z.infer<z.ZodObject<typeof askSchema>>) => {
     let cmd = `vibe-tools ask ${escapeShellArg(args.query)}`;

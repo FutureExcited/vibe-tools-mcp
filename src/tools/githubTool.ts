@@ -22,7 +22,8 @@ const githubSchema = {
 
 export const githubTool = {
   name: "github",
-  description: "Get information from GitHub using vibe-tools github.",
+  description:
+    "Get information about GitHub Pull Requests or Issues. Retrieves either the most recent 10 items or a specific one by number.",
   schema: githubSchema,
   handler: async (args: z.infer<z.ZodObject<typeof githubSchema>>) => {
     let cmd = `vibe-tools github ${args.subcommand}`;

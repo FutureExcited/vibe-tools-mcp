@@ -30,7 +30,8 @@ const repoSchema = {
 
 export const repoTool = {
   name: "repo",
-  description: "Ask questions about the repository using vibe-tools repo.",
+  description:
+    "Ask questions about the repository using context-aware analysis. This tool analyzes code repositories to provide relevant, code-aware answers to questions.",
   schema: repoSchema,
   handler: async (args: z.infer<z.ZodObject<typeof repoSchema>>) => {
     // Special debug case - if query starts with DEBUG: then show system info

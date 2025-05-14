@@ -4,12 +4,12 @@ import { executeVibeToolsCommand } from "./helpers.js";
 export const commandTool = {
   name: "command",
   description:
-    "Executes a vibe-tools command in a specified directory. Accepts the full 'vibe-tools <command>' or just '<command>'.",
+    "Executes any supported AI command with specified options in a directory. Provides a general interface to run commands with full flexibility.",
   schema: {
     command: z
       .string()
       .describe(
-        "The vibe-tools command string to execute (e.g., 'repo \"explain this\"' or 'vibe-tools repo \"explain this\"')"
+        "The command string to execute (e.g., 'repo \"explain this\"' or 'ask \"what is recursion\"')"
       ),
     directory: z
       .string()
@@ -44,12 +44,12 @@ export const commandTool = {
         content: [
           {
             type: "text",
-            text: "Error: Command must be a valid vibe-tools command.",
+            text: "Error: Command must be a valid command.",
           },
         ],
         error: {
           type: "invalid_request",
-          message: "Command must be a valid vibe-tools command.",
+          message: "Command must be a valid command.",
         },
       };
     }

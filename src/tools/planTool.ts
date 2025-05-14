@@ -32,7 +32,8 @@ const planSchema = {
 
 export const planTool = {
   name: "plan",
-  description: "Generate an implementation plan using vibe-tools plan.",
+  description:
+    "Generate a focused implementation plan for code changes or features. Uses multiple AI models to identify relevant files and create a detailed execution plan.",
   schema: planSchema,
   handler: async (args: z.infer<z.ZodObject<typeof planSchema>>) => {
     let cmd = `vibe-tools plan ${escapeShellArg(args.query)}`;

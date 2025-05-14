@@ -1,7 +1,7 @@
 {
   "name": "vibe-tools-mcp",
-  "version": "0.2.0",
-  "description": "MCP Server for vibe-tools",
+  "version": "0.2.1",
+  "description": "MCP Server for AI assistant tools - powered by vibe-tools",
   "main": "build/index.js",
   "type": "module",
   "bin": {

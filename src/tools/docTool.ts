@@ -29,7 +29,7 @@ const docSchema = {
 export const docTool = {
   name: "doc",
   description:
-    "Generate documentation for the repository using vibe-tools doc.",
+    "Generate comprehensive documentation for a code repository. Analyzes repository content and creates documentation that can be saved to a specified output file.",
   schema: docSchema,
   handler: async (args: z.infer<z.ZodObject<typeof docSchema>>) => {
     let cmd = "vibe-tools doc";
