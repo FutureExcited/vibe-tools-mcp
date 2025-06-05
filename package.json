@@ -25,12 +25,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.11.2",
-    "vibe-tools": "^0.60.9",
-    "zod": "^3.23.8"
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "vibe-tools": "^0.62.5",
+    "zod": "^3.25.51"
   },
   "devDependencies": {
-    "@types/node": "^20.12.12",
-    "typescript": "^5.4.5"
+    "@types/node": "^20.17.57",
+    "typescript": "^5.8.3"
   }
 }
