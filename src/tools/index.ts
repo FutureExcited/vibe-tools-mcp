@@ -7,6 +7,7 @@ import { githubTool } from "./githubTool.js";
 import { webTool } from "./webTool.js";
 import { youtubeTool } from "./youtubeTool.js";
 import { browserTool } from "./browserTool.js";
+import { mcpTool } from "./mcpTool.js";
 
 // Array containing all tool definitions
 export const allTools = [
@@ -19,4 +20,5 @@ export const allTools = [
   webTool,
   youtubeTool,
   browserTool,
+  mcpTool,
 ];

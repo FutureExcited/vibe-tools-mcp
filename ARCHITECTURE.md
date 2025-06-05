@@ -110,6 +110,13 @@ The following tools are currently implemented and registered with the MCP server
   - **Modes**: `open`, `act`, `observe`, `extract` (selected via `mode` parameter).
   - **Key Parameters**: `mode` (enum), `url` (string), `directory` (string, mandatory), `instruction` (string, optional, for act/observe/extract), and various browser control options (`console`, `html`, `screenshot`, `headless`, etc.).
 
+- **`mcp`** (`mcpTool.ts`)
+  - **Purpose**: Interact with MCP servers through the vibe-tools interface.
+  - **Key Parameters**: `subcommand` (enum: "run" | "search"), `query` (string), `directory` (string, mandatory), `provider` (string, optional).
+  - **Subcommands**: 
+    - `run`: Execute MCP server tools using natural language queries
+    - `search`: Search the MCP Marketplace for available servers
+
 ## 5. Workflow
 
 1.  An MCP client (e.g., an AI assistant) sends a tool invocation request to the `vibe-tools-mcp` server via the established transport (Stdio).
